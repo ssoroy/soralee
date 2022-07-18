@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 80%;
+            text-align: center;
+            margin: 0 auto;
+            background-color: black;
+        }
+        div p{
+            float: left;
+            color: white;
+            line-height: 100px;
+            width: 20%;
+        }
+        div ul{
+            list-style: none;
+            float: right;
+            width: 60%;
+        }
+        div::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        div ul li{
+            float: left;
+            width: 25%;
+        }
+        div ul::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        div ul li a{
+            display: block;
+            color: white;
+            text-decoration: none;
+            line-height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <P>메인로고</P>
+        <ul>
+            <li><a href="#">대메뉴1</a></li>
+            <li><a href="#">대메뉴2</a></li>
+            <li><a href="#">대메뉴3</a></li>
+            <li><a href="#">대메뉴4</a></li>
+        </ul>
+    </div>
+</body>
+</html>
