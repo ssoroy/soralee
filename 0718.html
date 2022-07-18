@@ -5,17 +5,94 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        a{
+            text-decoration: none
+        }
+        header{
+            width: 15%;
+            background-color: black;
+            text-align: center;
+        }
+        header h1 a{
+            color: aliceblue;
+            line-height: 100px;
+            display: block;
+        }
+        header .depth02{
+            height: 0;
+            overflow: hidden;
+            transition: 0.6s;
+        }
+        header nav > ul > li:hover .depth02{
+            height: 204px;
+        }
+        header nav ul{
+            list-style: none;
+        }
+        header nav ul li{
+            border-top: solid 1px white;
+        }
+        header nav ul li a{
+            color: aliceblue;
+            line-height: 100px;
+            display: block;
+        }
+        header .depth02 > li > a{
+            line-height: 50px;
+            background-color: gray;
+            
+        }
+    </style>
 </head>
 <body>
     <header>
-        <a href="#">메인로고</a>
+        <h1>
+            <a href="#">메인로고</a>
+        </h1>
         <nav>
-            <ul>
-                <li><a href="#">대메뉴1</a></li>
-                <li><a href="#">대메뉴2</a></li>
-                <li><a href="#">대메뉴3</a></li>
-                <li><a href="#">대메뉴4</a></li>
-            </ul>
+            <ul class="depth01">
+                <li>
+                    <a href="#">대메뉴1</a>
+                    <ul class="depth02">
+                        <li><a href="#">소메뉴1</a></li>
+                        <li><a href="#">소메뉴2</a></li>
+                        <li><a href="#">소메뉴3</a></li>
+                        <li><a href="#">소메뉴4</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">대메뉴2</a>
+                    <ul class="depth02">
+                        <li><a href="#">소메뉴1</a></li>
+                        <li><a href="#">소메뉴2</a></li>
+                        <li><a href="#">소메뉴3</a></li>
+                        <li><a href="#">소메뉴4</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">대메뉴3</a>
+                    <ul class="depth02">
+                        <li><a href="#">소메뉴1</a></li>
+                        <li><a href="#">소메뉴2</a></li>
+                        <li><a href="#">소메뉴3</a></li>
+                        <li><a href="#">소메뉴4</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">대메뉴4</a>
+                    <ul class="depth02">
+                        <li><a href="#">소메뉴1</a></li>
+                        <li><a href="#">소메뉴2</a></li>
+                        <li><a href="#">소메뉴3</a></li>
+                        <li><a href="#">소메뉴4</a></li>
+                </ul>
+                </li>
+                </ul>
         </nav>
     </header>
 </body>
