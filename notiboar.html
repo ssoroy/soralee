@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ol,ul,dl{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
+        #tab{
+            width: 800px;
+            text-align: center;
+            position: relative;
+        }
+        #tab > li{
+            float: left;
+            width: 50%;
+        }
+        #tab::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        #tab > li input{
+            display: none;
+        }
+        #tab > li label{
+            display: block;
+            background-color: #ccc;
+            color: #000;
+            line-height: 50px;
+        }
+        #tab .ab_box{
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background-color: antiquewhite;
+            height: 300px;
+            z-index: 1;
+        }
+        #tab > li input:checked ~ .ab_box{
+            z-index: 99;
+        }
+        #tab > li input:checked + label{
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <ul id="tab">
+        <li>
+            <input type="radio" id="notice" name="tab01">
+            <label for="notice">공지사항</label>
+            <div class="ab_box">공지사항내용입니다.</div>
+        </li>
+        <li>
+            <input type="radio" id="board" name="tab01">
+            <label for="board">게시판</label>
+            <div class="ab_box">게시판내용입니다.</div>
+        </li>
+    </ul>
+</body>
+</html>
