@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul,ol,dl{
+            list-style: none;
+        }
+        #tab{
+            margin: 300px;
+            width: 300px;
+            text-align: center;
+            position: relative;
+        }
+        #tab input{
+            display: none;
+        }
+        #tab label{
+            display: block;
+            line-height: 50px;
+            background-color: #000;
+            color: #fff;
+        }
+        #tab .fam{
+            position: absolute;
+            left: 0;
+            bottom: 100%;
+            width: 100%;
+            height: 0;
+            overflow: hidden;
+            transition: 0.6s;
+        }
+        #tab .fam li{}
+        #tab .fam li a{
+            display: block;
+            line-height: 50px;
+            background-color: #ccc;
+            color: #000;
+            text-decoration: none;
+        }
+        #tab input:checked ~.fam{
+            height: 250px;
+        }
+        #tab .fam li a:hover{
+            background-color: #000;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div id="tab">
+        <input type="checkbox" id="family" name="fam01">
+        <label for="family">패밀리사이트</label>
+        <ul class="fam">
+            <li><a href="#">패밀리사이트</a></li>
+            <li><a href="#">패밀리사이트</a></li>
+            <li><a href="#">패밀리사이트</a></li>
+            <li><a href="#">패밀리사이트</a></li>
+            <li><a href="#">패밀리사이트</a></li>
+        </ul>
+    </div>
+</body>
+</html>
